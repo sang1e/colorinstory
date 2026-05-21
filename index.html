@@ -8,398 +8,391 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --peach:#F9C6BC;--coral:#F4A896;--gold:#FAD6A0;
-  --mint:#A8DCEE;--ivory:#F0E8C8;--navy:#1a2744;
-  --accent:#C45C30;--text:#2C2218;--muted:#8C6040;
-}
-body{font-family:'Noto Sans KR',sans-serif;background:#FFF9F5;color:var(--text);min-height:100vh;}
-
-/* HEADER */
+body{font-family:'Noto Sans KR',sans-serif;background:#FFF9F5;color:#2C2218;min-height:100vh;}
 .header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#fff;border-bottom:0.5px solid rgba(196,92,48,0.15);position:sticky;top:0;z-index:100;}
 .logo{display:flex;align-items:center;gap:10px;}
 .logo-ring{width:32px;height:32px;border-radius:50%;background:conic-gradient(#e87c5a,#f9c74f,#90be6d,#4cc9f0,#7b2d8b,#e87c5a);display:flex;align-items:center;justify-content:center;}
 .logo-ring span{font-size:13px;font-weight:700;color:#fff;font-family:serif;}
-.logo-text .name{font-size:13px;font-weight:500;color:var(--navy);}
-.logo-text .sub{font-size:10px;color:var(--muted);letter-spacing:0.5px;}
-.header-season{font-size:11px;padding:4px 12px;border-radius:20px;background:#FFF0E8;color:var(--accent);border:0.5px solid rgba(196,92,48,0.2);font-weight:500;}
+.logo-name{font-size:13px;font-weight:500;color:#1a2744;}
+.logo-sub{font-size:10px;color:#8C6040;letter-spacing:0.5px;}
+.header-badge{font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;}
 
-/* HERO */
-.hero{background:linear-gradient(150deg,#FFF5EE 0%,#FFE8D8 55%,#FFD6C0 100%);padding:40px 24px 32px;text-align:center;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:220px;height:220px;border-radius:50%;background:rgba(255,210,180,0.35);}
-.hero::after{content:'';position:absolute;bottom:-30px;left:-20px;width:140px;height:140px;border-radius:50%;background:rgba(255,190,150,0.3);}
-.hero-tag{display:inline-block;background:rgba(255,255,255,0.6);color:var(--accent);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;font-weight:500;position:relative;z-index:1;}
-.hero-name{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted);margin-bottom:4px;position:relative;z-index:1;}
-.hero-season{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--navy);line-height:1.1;position:relative;z-index:1;}
-.hero-season-en{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--accent);margin-top:4px;position:relative;z-index:1;}
+.hero{padding:40px 24px 32px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:220px;height:220px;border-radius:50%;opacity:0.35;}
+.hero::after{content:'';position:absolute;bottom:-30px;left:-20px;width:140px;height:140px;border-radius:50%;opacity:0.3;}
+.hero-tag{display:inline-block;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;font-weight:500;position:relative;z-index:1;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:15px;margin-bottom:4px;position:relative;z-index:1;}
+.hero-season{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#1a2744;line-height:1.1;position:relative;z-index:1;}
+.hero-season-en{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;margin-top:4px;position:relative;z-index:1;}
 .hero-chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px;position:relative;z-index:1;}
-.hero-chip{background:rgba(255,255,255,0.65);border:0.5px solid rgba(196,92,48,0.2);border-radius:20px;padding:5px 14px;font-size:11px;color:#7a3018;}
+.hero-chip{border:0.5px solid;border-radius:20px;padding:5px 14px;font-size:11px;}
 
-/* NAV TABS */
-.tab-nav{display:flex;overflow-x:auto;background:#fff;border-bottom:0.5px solid rgba(196,92,48,0.12);padding:0 16px;gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.tab-nav{display:flex;overflow-x:auto;background:#fff;border-bottom:0.5px solid rgba(0,0,0,0.08);padding:0 16px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .tab-nav::-webkit-scrollbar{display:none;}
-.tab-btn{padding:12px 16px;font-size:12px;font-weight:400;color:#aaa;border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;font-family:'Noto Sans KR',sans-serif;}
-.tab-btn.active{color:var(--accent);font-weight:500;border-bottom-color:var(--accent);}
+.tab-btn{padding:12px 16px;font-size:12px;color:#aaa;border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;font-family:'Noto Sans KR',sans-serif;}
+.tab-btn.active{font-weight:500;border-bottom-color:currentColor;}
 
-/* PAGES */
-.page{display:none;padding:20px 20px 80px;}
+.page{display:none;padding:20px 20px 90px;}
 .page.active{display:block;}
 
-.sec-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);font-weight:500;padding:20px 0 12px;display:flex;align-items:center;gap:10px;}
-.sec-title::after{content:'';flex:1;height:0.5px;background:rgba(196,92,48,0.2);}
+.sec-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;padding:20px 0 12px;display:flex;align-items:center;gap:10px;}
+.sec-title::after{content:'';flex:1;height:0.5px;background:currentColor;opacity:0.2;}
 
-/* CARDS */
-.card{background:#fff;border:0.5px solid rgba(196,92,48,0.15);border-radius:14px;padding:16px 18px;margin-bottom:12px;}
-.card-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:10px;}
+.card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:14px;padding:16px 18px;margin-bottom:12px;}
+.card-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:10px;}
 
-/* PALETTE */
 .palette-wrap{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin-bottom:6px;}
 .swatch{aspect-ratio:1;border-radius:8px;border:0.5px solid rgba(0,0,0,0.07);}
-.swatch-sm{aspect-ratio:1;border-radius:6px;border:0.5px solid rgba(0,0,0,0.07);}
 
-.palette-labels{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin-bottom:14px;}
-.swatch-label{font-size:8px;text-align:center;color:var(--muted);line-height:1.3;}
-
-/* DESC */
-.desc{font-size:13px;color:#4a3828;line-height:1.85;}
-.desc strong{color:var(--accent);}
-
-/* TAGS */
+.desc{font-size:13px;line-height:1.85;color:#4a3828;}
+.desc strong{font-weight:500;}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
-.tag{padding:5px 13px;border-radius:20px;font-size:11px;background:#FFF0E8;color:#7a3018;border:0.5px solid rgba(196,92,48,0.2);}
+.tag{padding:5px 13px;border-radius:20px;font-size:11px;border:0.5px solid;}
 
-/* TONE GRID */
 .tone-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.tone-card{background:#FFFBF8;border:0.5px solid rgba(196,92,48,0.12);border-radius:12px;padding:14px;}
+.tone-card{background:#fffbf8;border:0.5px solid rgba(0,0,0,0.08);border-radius:12px;padding:14px;}
 .tone-dots{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px;}
-.tone-dot{width:34px;height:34px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;color:#666;}
-.tone-note{font-size:11px;color:var(--muted);line-height:1.6;}
+.tone-dot{width:34px;height:34px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;}
+.tone-note{font-size:11px;color:#8C6040;line-height:1.6;}
 
-/* FASHION */
 .fashion-palette{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px;}
-.fp-swatch{aspect-ratio:1;border-radius:8px;border:0.5px solid rgba(0,0,0,0.07);}
-.style-tags{display:flex;flex-wrap:wrap;gap:6px;}
 
-/* BEAUTY */
 .beauty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .b-swatches{display:flex;gap:5px;flex-wrap:wrap;}
 .b-dot{width:30px;height:30px;border-radius:7px;border:0.5px solid rgba(0,0,0,0.08);}
 
-.hair-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:4px;}
+.hair-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
 .hair-item{border-radius:8px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.07);}
 .hair-bar{height:44px;width:100%;}
-.hair-lbl{padding:4px 4px;font-size:8px;text-align:center;color:#6a5040;background:#FFFBF8;line-height:1.3;}
+.hair-lbl{padding:4px;font-size:8px;text-align:center;color:#6a5040;background:#fffbf8;line-height:1.3;}
 
-/* JEWELRY */
 .metal-list{display:flex;flex-wrap:wrap;gap:8px;}
-.metal-chip{display:flex;align-items:center;gap:7px;background:#FFFBF8;border:0.5px solid rgba(196,92,48,0.15);border-radius:20px;padding:7px 13px;font-size:12px;color:#4a3828;}
+.metal-chip{display:flex;align-items:center;gap:7px;background:#fffbf8;border:0.5px solid rgba(0,0,0,0.1);border-radius:20px;padding:7px 13px;font-size:12px;color:#4a3828;}
 .metal-dot{width:14px;height:14px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.1);flex-shrink:0;}
 
 .eye-list{display:flex;flex-direction:column;gap:8px;}
-.eye-item{display:flex;align-items:center;gap:12px;padding:10px 13px;background:#FFFBF8;border:0.5px solid rgba(196,92,48,0.12);border-radius:10px;}
+.eye-item{display:flex;align-items:center;gap:12px;padding:10px 13px;background:#fffbf8;border:0.5px solid rgba(0,0,0,0.08);border-radius:10px;}
 .eye-color{width:34px;height:34px;border-radius:8px;flex-shrink:0;border:0.5px solid rgba(0,0,0,0.08);}
-.eye-name{font-size:13px;font-weight:500;color:var(--navy);}
-.eye-desc{font-size:11px;color:var(--muted);margin-top:2px;}
+.eye-name{font-size:13px;font-weight:500;color:#1a2744;}
+.eye-desc{font-size:11px;color:#8C6040;margin-top:2px;}
 
-/* CONTACT */
-.contact-hero{background:var(--navy);border-radius:14px;padding:26px 20px;text-align:center;color:#fff;margin-bottom:12px;}
-.contact-quote{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#F9C6BC;margin-bottom:18px;line-height:1.7;}
+.contact-hero{background:#1a2744;border-radius:14px;padding:26px 20px;text-align:center;color:#fff;margin-bottom:12px;}
+.contact-quote{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;margin-bottom:18px;line-height:1.7;}
 .contact-brand{font-size:15px;font-weight:500;letter-spacing:1px;margin-bottom:18px;}
 .contact-items{display:flex;flex-direction:column;gap:10px;}
 .contact-item{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#c8d4e8;}
 
-/* BOTTOM NAV */
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#fff;border-top:0.5px solid rgba(196,92,48,0.15);z-index:100;max-width:680px;margin:0 auto;}
-.bnav-btn{flex:1;padding:10px 4px 8px;text-align:center;font-size:9px;color:#ccc;cursor:pointer;border:none;background:none;transition:color 0.2s;font-family:'Noto Sans KR',sans-serif;}
-.bnav-btn.active{color:var(--accent);}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#fff;border-top:0.5px solid rgba(0,0,0,0.1);z-index:100;}
+.bnav-btn{flex:1;padding:10px 4px 8px;text-align:center;font-size:9px;color:#ccc;cursor:pointer;border:none;background:none;font-family:'Noto Sans KR',sans-serif;}
+.bnav-btn.active{font-weight:500;}
 .bnav-icon{font-size:20px;display:block;margin-bottom:2px;}
+
+/* 에러 페이지 */
+.error-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;padding:40px 24px;text-align:center;}
+.error-icon{font-size:48px;margin-bottom:16px;}
+.error-title{font-size:20px;font-weight:500;color:#1a2744;margin-bottom:8px;}
+.error-desc{font-size:13px;color:#8C6040;line-height:1.7;}
 </style>
 </head>
 <body>
-
-<div style="max-width:680px;margin:0 auto;position:relative;">
+<div style="max-width:680px;margin:0 auto;position:relative;" id="app">
 
 <header class="header">
   <div class="logo">
     <div class="logo-ring"><span>C</span></div>
-    <div class="logo-text">
-      <div class="name">컬러인에듀센터</div>
-      <div class="sub">Color In Story</div>
+    <div>
+      <div class="logo-name">컬러인에듀센터</div>
+      <div class="logo-sub">Color In Story</div>
     </div>
   </div>
-  <span class="header-season">Spring Light</span>
+  <span class="header-badge" id="header-badge">진단 결과</span>
 </header>
 
-<div class="hero">
-  <div class="hero-tag">Personal Color Diagnosis</div>
-  <div class="hero-name" id="customer-name">정상원님의 진단 결과</div>
-  <div class="hero-season">봄 라이트 타입</div>
-  <div class="hero-season-en">Spring Light Type</div>
-  <div class="hero-chips">
-    <span class="hero-chip">로맨틱 Romantic</span>
-    <span class="hero-chip">프리티 Pretty</span>
-    <span class="hero-chip">Clear · Bright</span>
-    <span class="hero-chip">웜톤 Warm</span>
+<div id="main-content"></div>
+<div id="error-content" style="display:none;">
+  <div class="error-wrap">
+    <div class="error-icon">🔍</div>
+    <div class="error-title">진단 결과를 찾을 수 없어요</div>
+    <div class="error-desc">링크가 올바르지 않거나 만료되었습니다.<br>컬러인에듀센터에 문의해주세요.<br><br>📞 063-221-2802</div>
   </div>
 </div>
 
-<nav class="tab-nav">
-  <button class="tab-btn active" onclick="showPage(0,this)">진단</button>
-  <button class="tab-btn" onclick="showPage(1,this)">패션</button>
-  <button class="tab-btn" onclick="showPage(2,this)">뷰티</button>
-  <button class="tab-btn" onclick="showPage(3,this)">주얼리</button>
-  <button class="tab-btn" onclick="showPage(4,this)">연락처</button>
-</nav>
-
-<!-- PAGE 0: 진단 -->
-<div class="page active" id="page-0">
-  <div class="sec-title">퍼스널컬러 진단</div>
-  <div class="card">
-    <div class="desc">
-      봄라이트 컬러는 색의 <strong>깨끗함(Clear)</strong>과 <strong>맑음(Bright)</strong> 특징을 지닌 색입니다.<br><br>
-      파스텔계열의 <strong>피치(Peach), 옐로우(Yellow), 연두(Yellow Green), 아이보리(Ivory)</strong> 등 밝고 부드러운 색이 잘 어울리며, 원색이나 어두운색은 어울리지 않습니다.<br><br>
-      <strong>로맨틱(Romantic)</strong>하고 <strong>프리티(Pretty)</strong>한 타입입니다.
-    </div>
-    <div class="tags">
-      <span class="tag">웜톤 Warm</span><span class="tag">라이트 Light</span>
-      <span class="tag">밝고 투명한</span><span class="tag">파스텔</span><span class="tag">피치계열</span>
-    </div>
-  </div>
-
-  <div class="sec-title">베스트 컬러 팔레트</div>
-  <div class="card">
-    <div class="palette-wrap">
-      <div class="swatch" style="background:#F9C6BC;"></div>
-      <div class="swatch" style="background:#F4A896;"></div>
-      <div class="swatch" style="background:#FAD6A0;"></div>
-      <div class="swatch" style="background:#F9EB9A;"></div>
-      <div class="swatch" style="background:#C8ECA4;"></div>
-      <div class="swatch" style="background:#A4E0B4;"></div>
-      <div class="swatch" style="background:#A8DCEE;"></div>
-      <div class="swatch" style="background:#B4C8F0;"></div>
-      <div class="swatch" style="background:#F0E8C8;"></div>
-    </div>
-    <div class="palette-wrap">
-      <div class="swatch" style="background:#F2A080;"></div>
-      <div class="swatch" style="background:#E87858;"></div>
-      <div class="swatch" style="background:#F0C060;"></div>
-      <div class="swatch" style="background:#E4D450;"></div>
-      <div class="swatch" style="background:#90CC80;"></div>
-      <div class="swatch" style="background:#70C0A0;"></div>
-      <div class="swatch" style="background:#78B8D8;"></div>
-      <div class="swatch" style="background:#8CA8D8;"></div>
-      <div class="swatch" style="background:#D8C8A0;"></div>
-    </div>
-  </div>
-
-  <div class="sec-title">톤 분석</div>
-  <div class="tone-grid">
-    <div class="tone-card">
-      <div class="card-label">잘 어울리는 톤</div>
-      <div class="tone-dots">
-        <div class="tone-dot" style="background:#F9C6BC;">P</div>
-        <div class="tone-dot" style="background:#FAD6A0;">L</div>
-        <div class="tone-dot" style="background:#A8E0C0;">B</div>
-        <div class="tone-dot" style="background:#A8DCEE;">S</div>
-      </div>
-      <div class="tone-note">페일·라이트·브라이트·소프트</div>
-    </div>
-    <div class="tone-card">
-      <div class="card-label">피해야 할 톤</div>
-      <div class="tone-dots">
-        <div class="tone-dot" style="background:#4a4a6a;color:#fff;">Dk</div>
-        <div class="tone-dot" style="background:#2a2a2a;color:#fff;">Bk</div>
-        <div class="tone-dot" style="background:#888;color:#fff;">Gr</div>
-      </div>
-      <div class="tone-note">다크·블랙·그레이시 계열</div>
-    </div>
-  </div>
 </div>
-
-<!-- PAGE 1: 패션 -->
-<div class="page" id="page-1">
-  <div class="sec-title">Fashion Color</div>
-  <div class="card">
-    <div class="card-label">추천 컬러</div>
-    <div class="fashion-palette">
-      <div class="fp-swatch" style="background:#F9C6BC;"></div>
-      <div class="fp-swatch" style="background:#F4D0A0;"></div>
-      <div class="fp-swatch" style="background:#F8F0A0;"></div>
-      <div class="fp-swatch" style="background:#C8F0C0;"></div>
-      <div class="fp-swatch" style="background:#A8E0F0;"></div>
-      <div class="fp-swatch" style="background:#F4A896;"></div>
-      <div class="fp-swatch" style="background:#F0C060;"></div>
-      <div class="fp-swatch" style="background:#B8E8B0;"></div>
-      <div class="fp-swatch" style="background:#F8F4E0;"></div>
-      <div class="fp-swatch" style="background:#E8E0D0;"></div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-label">스타일 가이드</div>
-    <div class="desc">
-      밝고 부드러운 유형으로 온화하고 맑은 이미지를 가진 봄 라이트 타입은 부드럽고 여성스러운 <strong>로맨틱한 스타일</strong>과 맑고 깨끗한 이미지의 스타일이 잘 어울립니다.<br><br>
-      파스텔톤과 아이보리 계열의 색을 활용하면 더욱 맑고 투명한 이미지를 부여합니다.
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-label">스타일 키워드</div>
-    <div class="style-tags tags">
-      <span class="tag">플로럴 패턴</span><span class="tag">파스텔톤</span>
-      <span class="tag">로맨틱 실루엣</span><span class="tag">페미닌핏</span>
-      <span class="tag">아이보리 계열</span><span class="tag">부드러운 소재</span>
-      <span class="tag">쉬폰·린넨</span><span class="tag">플레어 스커트</span>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 2: 뷰티 -->
-<div class="page" id="page-2">
-  <div class="sec-title">Beauty Color</div>
-  <div class="beauty-grid">
-    <div class="card">
-      <div class="card-label">Eye Shadow</div>
-      <div class="b-swatches">
-        <div class="b-dot" style="background:#FBE9C8;"></div>
-        <div class="b-dot" style="background:#F4CC90;"></div>
-        <div class="b-dot" style="background:#EAB070;"></div>
-        <div class="b-dot" style="background:#E89060;"></div>
-        <div class="b-dot" style="background:#D87040;"></div>
-      </div>
-      <div class="b-swatches" style="margin-top:5px;">
-        <div class="b-dot" style="background:#E8C8A0;"></div>
-        <div class="b-dot" style="background:#D4A880;"></div>
-        <div class="b-dot" style="background:#C08860;"></div>
-        <div class="b-dot" style="background:#9A6848;"></div>
-        <div class="b-dot" style="background:#7A4828;"></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-label">Lip & Check</div>
-      <div class="b-swatches">
-        <div class="b-dot" style="background:#F4A898;"></div>
-        <div class="b-dot" style="background:#F2907C;"></div>
-        <div class="b-dot" style="background:#F0B878;"></div>
-        <div class="b-dot" style="background:#E89060;"></div>
-        <div class="b-dot" style="background:#E06848;"></div>
-      </div>
-      <div class="tone-note" style="margin-top:8px;">코랄·피치·오렌지 계열</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-label">EyeBrow</div>
-    <div class="b-swatches">
-      <div class="b-dot" style="background:#C8A870;"></div>
-      <div class="b-dot" style="background:#A88858;"></div>
-      <div class="b-dot" style="background:#907040;"></div>
-    </div>
-    <div class="tone-note" style="margin-top:8px;">골든 브라운 · 웜 브라운 계열 아이브로우</div>
-  </div>
-
-  <div class="sec-title">Hair Color</div>
-  <div class="card">
-    <div class="hair-grid">
-      <div class="hair-item">
-        <div class="hair-bar" style="background:linear-gradient(180deg,#D4A060,#C08840);"></div>
-        <div class="hair-lbl">01<br>Honey Blonde</div>
-      </div>
-      <div class="hair-item">
-        <div class="hair-bar" style="background:linear-gradient(180deg,#D4A898,#C09078);"></div>
-        <div class="hair-lbl">02<br>Peach Beige</div>
-      </div>
-      <div class="hair-item">
-        <div class="hair-bar" style="background:linear-gradient(180deg,#E87848,#D05830);"></div>
-        <div class="hair-lbl">03<br>Coral Orange</div>
-      </div>
-      <div class="hair-item">
-        <div class="hair-bar" style="background:linear-gradient(180deg,#F0C0A8,#E0A888);"></div>
-        <div class="hair-lbl">04<br>Light Peach</div>
-      </div>
-      <div class="hair-item">
-        <div class="hair-bar" style="background:linear-gradient(180deg,#E8D090,#D4B860);"></div>
-        <div class="hair-lbl">05<br>Lt Yellow Blonde</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 3: 주얼리 -->
-<div class="page" id="page-3">
-  <div class="sec-title">Jewelry</div>
-  <div class="card">
-    <div class="card-label">추천 금속 계열</div>
-    <div class="metal-list">
-      <div class="metal-chip"><div class="metal-dot" style="background:linear-gradient(135deg,#E8C060,#C8981E);"></div>골드 Gold</div>
-      <div class="metal-chip"><div class="metal-dot" style="background:linear-gradient(135deg,#F0A8A0,#D88080);"></div>로즈골드</div>
-      <div class="metal-chip"><div class="metal-dot" style="background:linear-gradient(135deg,#F8E8C0,#E8C880);"></div>샴페인골드</div>
-      <div class="metal-chip"><div class="metal-dot" style="background:linear-gradient(135deg,#F0D0B8,#E0B898);"></div>밀크티베이지</div>
-    </div>
-    <div class="desc" style="margin-top:12px;font-size:12px;">노란 기가 살짝 섞인 따뜻하고 밝은 컬러가 베스트. 실버보다는 <strong>골드 계열</strong>이 피부에 생기를 줍니다.</div>
-  </div>
-
-  <div class="sec-title">Eyewear</div>
-  <div class="card">
-    <div class="eye-list">
-      <div class="eye-item">
-        <div class="eye-color" style="background:linear-gradient(135deg,#C8981E,#E8C060);"></div>
-        <div><div class="eye-name">Gold / 골드</div><div class="eye-desc">라이트 골드 메탈 프레임</div></div>
-      </div>
-      <div class="eye-item">
-        <div class="eye-color" style="background:linear-gradient(135deg,#D4B898,#C0A080);"></div>
-        <div><div class="eye-name">Beige / 베이지</div><div class="eye-desc">밀크티 베이지 프레임</div></div>
-      </div>
-      <div class="eye-item">
-        <div class="eye-color" style="background:linear-gradient(135deg,#F0B0B0,#E09090);"></div>
-        <div><div class="eye-name">Pink / 핑크</div><div class="eye-desc">투명한 코랄 핑크 프레임</div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 4: 연락처 -->
-<div class="page" id="page-4">
-  <div class="sec-title">컬러인에듀센터</div>
-  <div class="contact-hero">
-    <div class="contact-quote">" 색으로 보여주고, 이미지로 말하다. "</div>
-    <div class="contact-brand">컬러인에듀센터</div>
-    <div class="contact-items">
-      <div class="contact-item">📞 063-221-2802 / 010-3443-2802</div>
-      <div class="contact-item">✉️ dldldlgo@naver.com</div>
-      <div class="contact-item">📸 @colorinstory_official</div>
-      <div class="contact-item">📍 전북 전주시 홍산남로51 프렌즈빌딩 8층</div>
-    </div>
-  </div>
-  <div class="card" style="text-align:center;">
-    <div class="card-label" style="text-align:center;margin-bottom:10px;">다음 예약</div>
-    <div class="desc" style="text-align:center;font-size:12px;">카카오톡 채널 또는 전화로 예약 후<br>대면 진단을 진행합니다.</div>
-    <a href="tel:0632212802" style="display:inline-block;margin-top:14px;padding:10px 28px;background:var(--navy);color:#fff;border-radius:20px;font-size:13px;text-decoration:none;font-weight:500;">전화 예약하기</a>
-  </div>
-</div>
-
-</div><!-- end max-width wrap -->
-
-<nav class="bottom-nav">
-  <button class="bnav-btn active" id="bnav-0" onclick="showPage(0,null,this)"><span class="bnav-icon">🎨</span>진단</button>
-  <button class="bnav-btn" id="bnav-1" onclick="showPage(1,null,this)"><span class="bnav-icon">👗</span>패션</button>
-  <button class="bnav-btn" id="bnav-2" onclick="showPage(2,null,this)"><span class="bnav-icon">💄</span>뷰티</button>
-  <button class="bnav-btn" id="bnav-3" onclick="showPage(3,null,this)"><span class="bnav-icon">💎</span>주얼리</button>
-  <button class="bnav-btn" id="bnav-4" onclick="showPage(4,null,this)"><span class="bnav-icon">📞</span>연락처</button>
-</nav>
 
 <script>
-const tabs = document.querySelectorAll('.tab-btn');
-const bnavs = document.querySelectorAll('.bnav-btn');
+// ── 시즌별 데이터 ──────────────────────────────
+const SEASONS = {
+  spring: {
+    ko:'봄 라이트 타입', en:'Spring Light Type', badge:'Spring Light',
+    accent:'#C45C30', bg:'linear-gradient(150deg,#FFF5EE,#FFE8D8,#FFD6C0)',
+    tagBg:'rgba(255,255,255,0.6)', tagColor:'#7a3018', tagBorder:'rgba(196,92,48,0.2)',
+    chips:['로맨틱 Romantic','프리티 Pretty','Clear · Bright','웜톤 Warm'],
+    desc:'봄라이트 컬러는 색의 <strong>깨끗함(Clear)</strong>과 <strong>맑음(Bright)</strong> 특징을 지닌 색입니다. 파스텔계열의 <strong>피치, 옐로우, 연두, 아이보리</strong> 등 밝고 부드러운 색이 잘 어울리며, 원색이나 어두운색은 어울리지 않습니다.',
+    tags:['웜톤 Warm','라이트 Light','밝고 투명한','파스텔','피치계열'],
+    bestColors:['#F9C6BC','#F4A896','#FAD6A0','#F9EB9A','#C8ECA4','#A4E0B4','#A8DCEE','#B4C8F0','#F0E8C8','#F2A080','#E87858','#F0C060','#E4D450','#90CC80','#70C0A0','#78B8D8','#8CA8D8','#D8C8A0'],
+    goodTones:[{bg:'#F9C6BC',label:'P'},{bg:'#FAD6A0',label:'L'},{bg:'#A8E0C0',label:'B'},{bg:'#A8DCEE',label:'S'}],
+    goodToneNote:'페일·라이트·브라이트·소프트',
+    badTones:[{bg:'#4a4a6a',label:'Dk',dark:true},{bg:'#2a2a2a',label:'Bk',dark:true},{bg:'#888',label:'Gr',dark:true}],
+    badToneNote:'다크·블랙·그레이시 계열',
+    fashionColors:['#F9C6BC','#F4D0A0','#F8F0A0','#C8F0C0','#A8E0F0','#F4A896','#F0C060','#B8E8B0','#F8F4E0','#E8E0D0'],
+    fashionDesc:'밝고 부드러운 유형으로 온화하고 맑은 이미지를 가진 봄 라이트 타입은 부드럽고 여성스러운 <strong>로맨틱한 스타일</strong>과 맑고 깨끗한 이미지의 스타일이 잘 어울립니다. 파스텔톤과 아이보리 계열의 색을 활용하면 더욱 맑고 투명한 이미지를 부여합니다.',
+    fashionTags:['플로럴 패턴','파스텔톤','로맨틱 실루엣','페미닌핏','아이보리 계열','쉬폰·린넨','플레어 스커트'],
+    eyeShadow:[['#FBE9C8','#F4CC90','#EAB070','#E89060','#D87040'],['#E8C8A0','#D4A880','#C08860','#9A6848','#7A4828']],
+    lipCheck:['#F4A898','#F2907C','#F0B878','#E89060','#E06848'],
+    lipNote:'코랄·피치·오렌지 계열',
+    eyebrow:['#C8A870','#A88858','#907040'],
+    eyebrowNote:'골든 브라운 · 웜 브라운 계열',
+    hairColors:[{bg:'linear-gradient(180deg,#D4A060,#C08840)',label:'01\nHoney Blonde'},{bg:'linear-gradient(180deg,#D4A898,#C09078)',label:'02\nPeach Beige'},{bg:'linear-gradient(180deg,#E87848,#D05830)',label:'03\nCoral Orange'},{bg:'linear-gradient(180deg,#F0C0A8,#E0A888)',label:'04\nLight Peach'},{bg:'linear-gradient(180deg,#E8D090,#D4B860)',label:'05\nLt Yellow Blonde'}],
+    metals:[{bg:'linear-gradient(135deg,#E8C060,#C8981E)',name:'골드 Gold'},{bg:'linear-gradient(135deg,#F0A8A0,#D88080)',name:'로즈골드'},{bg:'linear-gradient(135deg,#F8E8C0,#E8C880)',name:'샴페인골드'},{bg:'linear-gradient(135deg,#F0D0B8,#E0B898)',name:'밀크티베이지'}],
+    metalNote:'노란 기가 살짝 섞인 따뜻하고 밝은 컬러가 베스트. 실버보다는 <strong>골드 계열</strong>이 피부에 생기를 줍니다.',
+    eyewear:[{bg:'linear-gradient(135deg,#C8981E,#E8C060)',name:'Gold / 골드',desc:'라이트 골드 메탈 프레임'},{bg:'linear-gradient(135deg,#D4B898,#C0A080)',name:'Beige / 베이지',desc:'밀크티 베이지 프레임'},{bg:'linear-gradient(135deg,#F0B0B0,#E09090)',name:'Pink / 핑크',desc:'투명한 코랄 핑크 프레임'}],
+  },
+  summer: {
+    ko:'여름 쿨톤 타입', en:'Summer Cool Type', badge:'Summer Cool',
+    accent:'#3A6BAA', bg:'linear-gradient(150deg,#EFF5FF,#D8E8FF,#C0D4F8)',
+    tagBg:'rgba(255,255,255,0.6)', tagColor:'#1a3a6a', tagBorder:'rgba(58,107,170,0.2)',
+    chips:['엘레강스 Elegance','소피스티케이티드','Cool · Soft','쿨톤'],
+    desc:'여름 쿨톤은 <strong>부드럽고 차가운(Cool)</strong> 특징을 가진 색이 잘 어울립니다. <strong>라벤더, 파우더 블루, 로즈핑크, 소프트 화이트</strong> 등 채도가 낮고 부드러운 쿨톤 계열이 피부를 화사하게 만들어줍니다.',
+    tags:['쿨톤 Cool','소프트','라벤더','블루핑크','파우더'],
+    bestColors:['#E8D0F0','#D0B8E8','#C8D8F8','#A8C4F0','#D8C0E8','#F0C8D8','#C0E0F0','#B8D0E8','#F8F0F8','#D0A8D8','#A890C8','#90A8D8','#C890B8','#E8B0C8','#B0D8E8','#98B8D8','#D8B0D0','#F0E0F0'],
+    goodTones:[{bg:'#E8D0F0',label:'P'},{bg:'#C8D8F8',label:'L'},{bg:'#D0B8E8',label:'S'},{bg:'#B8C8E8',label:'M'}],
+    goodToneNote:'페일·라이트·소프트·뮤트',
+    badTones:[{bg:'#8B5E20',label:'Au',dark:true},{bg:'#C87820',label:'Or',dark:false},{bg:'#4a3010',label:'Bk',dark:true}],
+    badToneNote:'웜톤·오렌지·골든 계열',
+    fashionColors:['#E8D0F0','#C8D8F8','#F0C8D8','#D8E8F8','#E8E0F8','#D0A8D8','#A8C4F0','#F8E8F0','#E0D0F8','#C0D8F0'],
+    fashionDesc:'여름 쿨톤은 <strong>소프트하고 엘레강스한 스타일</strong>이 잘 어울립니다. 라벤더, 파우더 블루 등 부드러운 쿨톤 컬러와 섬세한 소재를 활용하면 세련된 이미지를 완성할 수 있습니다.',
+    fashionTags:['소프트 드레이프','라벤더 톤','쿨한 파스텔','엘레강스 핏','실크·시폰','플로럴 레이스'],
+    eyeShadow:[['#F0E0F8','#D8C0E8','#C0A0D8','#A880C0','#9068A8'],['#D0C0E0','#B8A0C8','#A088B0','#887098','#706080']],
+    lipCheck:['#E8A8C0','#D890A8','#E0A0B8','#C880A0','#B86888'],
+    lipNote:'로즈핑크·모브·쿨핑크 계열',
+    eyebrow:['#A8A0B8','#908898','#786878'],
+    eyebrowNote:'애쉬 브라운 · 쿨 그레이 브라운',
+    hairColors:[{bg:'linear-gradient(180deg,#B8A8C8,#A090B0)',label:'01\nAsh Brown'},{bg:'linear-gradient(180deg,#C0B0D0,#A898B8)',label:'02\nLavender Ash'},{bg:'linear-gradient(180deg,#B0A0C0,#9888A8)',label:'03\nCool Brown'},{bg:'linear-gradient(180deg,#C8C0D8,#B0A8C0)',label:'04\nSilver Ash'},{bg:'linear-gradient(180deg,#A898B8,#9080A0)',label:'05\nMauve Brown'}],
+    metals:[{bg:'linear-gradient(135deg,#D0D0D8,#B0B0C0)',name:'실버 Silver'},{bg:'linear-gradient(135deg,#C0C8D8,#A0A8C0)',name:'화이트골드'},{bg:'linear-gradient(135deg,#D8C8D8,#C0A8C0)',name:'로즈실버'},{bg:'linear-gradient(135deg,#E0E0E8,#C8C8D8)',name:'플래티넘'}],
+    metalNote:'<strong>실버·화이트골드</strong> 계열이 피부를 맑고 투명하게 보이게 합니다. 골드보다 쿨한 금속이 잘 어울립니다.',
+    eyewear:[{bg:'linear-gradient(135deg,#C0C0D0,#A0A0C0)',name:'Silver / 실버',desc:'쿨 실버 메탈 프레임'},{bg:'linear-gradient(135deg,#D8C8E0,#C0B0C8)',name:'Lavender / 라벤더',desc:'소프트 라벤더 프레임'},{bg:'linear-gradient(135deg,#C8C8D8,#B0B0C8)',name:'Gray / 그레이',desc:'쿨 그레이 프레임'}],
+  },
+  autumn: {
+    ko:'가을 웜톤 타입', en:'Autumn Warm Type', badge:'Autumn Warm',
+    accent:'#8B5E20', bg:'linear-gradient(150deg,#FFF8EE,#FFE8C0,#FFCC80)',
+    tagBg:'rgba(255,255,255,0.6)', tagColor:'#5a3010', tagBorder:'rgba(139,94,32,0.2)',
+    chips:['클래식 Classic','내추럴 Natural','Mute · Deep','웜톤 Warm'],
+    desc:'가을 웜톤은 <strong>깊고 따뜻한(Warm · Deep)</strong> 특징을 가진 색이 잘 어울립니다. <strong>카멜, 테라코타, 올리브, 머스타드</strong> 등 깊이 있고 차분한 웜톤 컬러가 피부에 생기를 더해줍니다.',
+    tags:['웜톤 Warm','딥 Deep','어스톤','카멜','테라코타'],
+    bestColors:['#D4A060','#C88840','#B87030','#A06028','#E8C080','#C0A860','#A08840','#806830','#D8B870','#C09050','#A07040','#805830','#E0C898','#C8A870','#A88850','#887040','#D0A050','#B08040'],
+    goodTones:[{bg:'#D4A060',label:'M'},{bg:'#C08840',label:'D'},{bg:'#B07030',label:'Dp'},{bg:'#A06028',label:'Dk'}],
+    goodToneNote:'뮤트·딥·다크·스트롱',
+    badTones:[{bg:'#D0E8F8',label:'Lt'},{bg:'#E8D0F0',label:'Lv'},{bg:'#E0E0F0',label:'Wh'}],
+    badToneNote:'쿨톤·파스텔·밝은 계열',
+    fashionColors:['#D4A060','#B87030','#A08840','#806830','#C08840','#E8C080','#A07040','#805830','#C0A860','#D8B870'],
+    fashionDesc:'가을 웜톤은 <strong>클래식하고 내추럴한 스타일</strong>이 잘 어울립니다. 카멜, 테라코타, 올리브 등 어스톤 컬러와 두꺼운 소재를 활용하면 세련되고 성숙한 이미지를 완성할 수 있습니다.',
+    fashionTags:['어스톤','클래식 핏','트위드·울','레더 소재','카멜 코트','보헤미안'],
+    eyeShadow:[['#E8C898','#D4A870','#C08848','#A07030','#805020'],['#D0B080','#BC9060','#A07040','#886030','#704820']],
+    lipCheck:['#C07848','#B06030','#D09060','#A05828','#E0A870'],
+    lipNote:'테라코타·브릭레드·카멜 계열',
+    eyebrow:['#806030','#6a4820','#543810'],
+    eyebrowNote:'다크 브라운 · 웜 브라운 계열',
+    hairColors:[{bg:'linear-gradient(180deg,#8B5E20,#6a4010)',label:'01\nDark Brown'},{bg:'linear-gradient(180deg,#A07030,#805020)',label:'02\nChestnut'},{bg:'linear-gradient(180deg,#C08840,#A06820)',label:'03\nCaramel'},{bg:'linear-gradient(180deg,#D4A060,#B07830)',label:'04\nGolden Brown'},{bg:'linear-gradient(180deg,#B87030,#905020)',label:'05\nTerracotta'}],
+    metals:[{bg:'linear-gradient(135deg,#D4A830,#B88820)',name:'골드 Gold'},{bg:'linear-gradient(135deg,#C89040,#A07020)',name:'앤틱골드'},{bg:'linear-gradient(135deg,#C0A060,#A08040)',name:'브론즈'},{bg:'linear-gradient(135deg,#B89060,#907040)',name:'로즈골드'}],
+    metalNote:'<strong>골드·앤틱골드·브론즈</strong> 계열이 가장 잘 어울립니다. 매트한 질감의 골드가 피부를 깊고 풍성하게 보이게 합니다.',
+    eyewear:[{bg:'linear-gradient(135deg,#8B5E20,#6a4010)',name:'Dark Brown',desc:'다크 브라운 셀룰로이드'},{bg:'linear-gradient(135deg,#C08840,#A06820)',name:'Caramel / 카멜',desc:'웜 카멜 프레임'},{bg:'linear-gradient(135deg,#806030,#604020)',name:'Tortoise / 토이',desc:'토이쉘 패턴 프레임'}],
+  },
+  winter: {
+    ko:'겨울 쿨톤 타입', en:'Winter Cool Type', badge:'Winter Cool',
+    accent:'#2D4880', bg:'linear-gradient(150deg,#EEF2FF,#D8E0FF,#C0C8F8)',
+    tagBg:'rgba(255,255,255,0.6)', tagColor:'#1a2a5a', tagBorder:'rgba(45,72,128,0.2)',
+    chips:['시크 Chic','모던 Modern','Clear · Deep','쿨톤'],
+    desc:'겨울 쿨톤은 <strong>선명하고 차가운(Cool · Clear)</strong> 특징을 가진 색이 잘 어울립니다. <strong>블랙, 화이트, 네이비, 버건디</strong> 등 선명하고 강렬한 쿨톤 컬러가 세련된 이미지를 완성합니다.',
+    tags:['쿨톤 Cool','클리어','다크·딥','블랙&화이트','버건디'],
+    bestColors:['#2040A0','#4060C0','#6080D8','#102080','#C02040','#A01030','#8090C8','#6070A8','#1a1a2a','#304090','#A02030','#D04060','#4870B0','#2050A0','#B03050','#6080C0','#303880','#C83060'],
+    goodTones:[{bg:'#2040A0',label:'V',dark:true},{bg:'#4060C0',label:'B',dark:true},{bg:'#C02040',label:'S',dark:true},{bg:'#303880',label:'D',dark:true}],
+    goodToneNote:'비비드·브라이트·스트롱·딥',
+    badTones:[{bg:'#F0D8C0',label:'Pe'},{bg:'#E8C898',label:'Lt'},{bg:'#D4A860',label:'Wm'}],
+    badToneNote:'파스텔·베이지·웜톤 계열',
+    fashionColors:['#1a1a2a','#2040A0','#C02040','#4060C0','#ffffff','#A01030','#6080D8','#102080','#D04060','#303880'],
+    fashionDesc:'겨울 쿨톤은 <strong>시크하고 모던한 스타일</strong>이 잘 어울립니다. 블랙, 화이트, 네이비 등 선명한 쿨톤 컬러와 심플한 라인을 활용하면 도시적이고 세련된 이미지를 완성할 수 있습니다.',
+    fashionTags:['블랙&화이트','모던 실루엣','스트럭처드','미니멀','레더 소재','샤프한 라인'],
+    eyeShadow:[['#E0E8F8','#C0C8E8','#A0A8C8','#8090A8','#607088'],['#D0D8F0','#B0B8D8','#9098B8','#708098','#506070']],
+    lipCheck:['#C02040','#A01030','#D04060','#B83050','#801828'],
+    lipNote:'버건디·로즈레드·쿨레드 계열',
+    eyebrow:['#303838','#484858','#606070'],
+    eyebrowNote:'블랙·다크 그레이 계열',
+    hairColors:[{bg:'linear-gradient(180deg,#1a1a2a,#101018)',label:'01\nBlue Black'},{bg:'linear-gradient(180deg,#303048,#202030)',label:'02\nDark Navy'},{bg:'linear-gradient(180deg,#484858,#303040)',label:'03\nCool Black'},{bg:'linear-gradient(180deg,#808098,#606080)',label:'04\nAsh Gray'},{bg:'linear-gradient(180deg,#606078,#404858)',label:'05\nCool Gray'}],
+    metals:[{bg:'linear-gradient(135deg,#D8D8E0,#B8B8C8)',name:'실버 Silver'},{bg:'linear-gradient(135deg,#E0E0E8,#C8C8D8)',name:'플래티넘'},{bg:'linear-gradient(135deg,#C8D0E0,#B0B8D0)',name:'화이트골드'},{bg:'linear-gradient(135deg,#D0D0D8,#B8B8C8)',name:'크롬 Chrome'}],
+    metalNote:'<strong>실버·플래티넘·화이트골드</strong>가 잘 어울립니다. 광택감 있는 실버 메탈이 겨울 쿨톤의 선명한 피부색을 더욱 돋보이게 합니다.',
+    eyewear:[{bg:'linear-gradient(135deg,#1a1a2a,#101018)',name:'Black / 블랙',desc:'블랙 셀룰로이드 프레임'},{bg:'linear-gradient(135deg,#D8D8E0,#B8B8C8)',name:'Silver / 실버',desc:'쿨 실버 메탈 프레임'},{bg:'linear-gradient(135deg,#303048,#202030)',name:'Navy / 네이비',desc:'다크 네이비 프레임'}],
+  }
+};
 
-function showPage(idx, tabEl, bnavEl){
-  document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('active',i===idx));
-  tabs.forEach((t,i)=>t.classList.toggle('active',i===idx));
-  bnavs.forEach((b,i)=>b.classList.toggle('active',i===idx));
-  window.scrollTo({top:0,behavior:'smooth'});
+// ── URL 파라미터 파싱 ──────────────────────────
+const params = new URLSearchParams(window.location.search);
+const customerName = params.get('name') || '';
+const seasonKey = params.get('season') || '';
+const subtype = params.get('type') || '';
+const date = params.get('date') || '';
+
+const S = SEASONS[seasonKey];
+
+if(!S){
+  document.getElementById('error-content').style.display='block';
+} else {
+  renderPage(S, customerName, subtype, date);
 }
 
-// URL 파라미터로 고객 이름 표시
-const params = new URLSearchParams(window.location.search);
-const name = params.get('name');
-if(name) document.getElementById('customer-name').textContent = decodeURIComponent(name) + '님의 진단 결과';
+function renderPage(S, name, subtype, date){
+  // 헤더 배지
+  const badge = document.getElementById('header-badge');
+  badge.textContent = S.badge;
+  badge.style.background = S.tagBg;
+  badge.style.color = S.accent;
+  badge.style.border = '0.5px solid '+S.tagBorder;
+
+  const html = `
+  <div class="hero" style="background:${S.bg};">
+    <div class="hero::before" style="background:${S.accent};"></div>
+    <div class="hero-tag" style="background:${S.tagBg};color:${S.accent};border:0.5px solid ${S.tagBorder};">Personal Color Diagnosis</div>
+    <div class="hero-name" style="color:${S.accent};">${name ? name+'님의 진단 결과' : '퍼스널컬러 진단 결과'}</div>
+    <div class="hero-season">${S.ko}${subtype ? ' · '+subtype : ''}</div>
+    <div class="hero-season-en" style="color:${S.accent};">${S.en}</div>
+    <div class="hero-chips">
+      ${S.chips.map(c=>`<span class="hero-chip" style="background:${S.tagBg};color:${S.tagColor};border:0.5px solid ${S.tagBorder};">${c}</span>`).join('')}
+    </div>
+  </div>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" style="color:${S.accent};" onclick="showPage(0,this)">진단</button>
+    <button class="tab-btn" onclick="showPage(1,this)">패션</button>
+    <button class="tab-btn" onclick="showPage(2,this)">뷰티</button>
+    <button class="tab-btn" onclick="showPage(3,this)">주얼리</button>
+    <button class="tab-btn" onclick="showPage(4,this)">연락처</button>
+  </nav>
+
+  <!-- 진단 -->
+  <div class="page active" id="page-0">
+    <div class="sec-title" style="color:${S.accent};">퍼스널컬러 진단</div>
+    <div class="card">
+      <div class="desc">${S.desc}</div>
+      <div class="tags">${S.tags.map(t=>`<span class="tag" style="background:${S.tagBg};color:${S.tagColor};border-color:${S.tagBorder};">${t}</span>`).join('')}</div>
+    </div>
+    <div class="sec-title" style="color:${S.accent};">베스트 컬러 팔레트</div>
+    <div class="card">
+      <div class="palette-wrap">${S.bestColors.slice(0,9).map(c=>`<div class="swatch" style="background:${c};"></div>`).join('')}</div>
+      <div class="palette-wrap">${S.bestColors.slice(9,18).map(c=>`<div class="swatch" style="background:${c};"></div>`).join('')}</div>
+    </div>
+    <div class="sec-title" style="color:${S.accent};">톤 분석</div>
+    <div class="tone-grid">
+      <div class="tone-card">
+        <div class="card-label" style="color:${S.accent};">잘 어울리는 톤</div>
+        <div class="tone-dots">${S.goodTones.map(t=>`<div class="tone-dot" style="background:${t.bg};color:${t.dark?'#fff':'#555'};">${t.label}</div>`).join('')}</div>
+        <div class="tone-note">${S.goodToneNote}</div>
+      </div>
+      <div class="tone-card">
+        <div class="card-label" style="color:${S.accent};">피해야 할 톤</div>
+        <div class="tone-dots">${S.badTones.map(t=>`<div class="tone-dot" style="background:${t.bg};color:${t.dark?'#fff':'#333'};">${t.label}</div>`).join('')}</div>
+        <div class="tone-note">${S.badToneNote}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 패션 -->
+  <div class="page" id="page-1">
+    <div class="sec-title" style="color:${S.accent};">Fashion Color</div>
+    <div class="card">
+      <div class="card-label" style="color:${S.accent};">추천 컬러</div>
+      <div class="fashion-palette">${S.fashionColors.map(c=>`<div class="swatch" style="background:${c};aspect-ratio:1;border-radius:8px;border:0.5px solid rgba(0,0,0,0.07);"></div>`).join('')}</div>
+    </div>
+    <div class="card"><div class="desc">${S.fashionDesc}</div></div>
+    <div class="card">
+      <div class="card-label" style="color:${S.accent};">스타일 키워드</div>
+      <div class="tags">${S.fashionTags.map(t=>`<span class="tag" style="background:${S.tagBg};color:${S.tagColor};border-color:${S.tagBorder};">${t}</span>`).join('')}</div>
+    </div>
+  </div>
+
+  <!-- 뷰티 -->
+  <div class="page" id="page-2">
+    <div class="sec-title" style="color:${S.accent};">Beauty Color</div>
+    <div class="beauty-grid">
+      <div class="card">
+        <div class="card-label" style="color:${S.accent};">Eye Shadow</div>
+        ${S.eyeShadow.map(row=>`<div class="b-swatches" style="margin-bottom:5px;">${row.map(c=>`<div class="b-dot" style="background:${c};"></div>`).join('')}</div>`).join('')}
+      </div>
+      <div class="card">
+        <div class="card-label" style="color:${S.accent};">Lip & Check</div>
+        <div class="b-swatches">${S.lipCheck.map(c=>`<div class="b-dot" style="background:${c};"></div>`).join('')}</div>
+        <div class="tone-note" style="margin-top:8px;">${S.lipNote}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-label" style="color:${S.accent};">EyeBrow</div>
+      <div class="b-swatches">${S.eyebrow.map(c=>`<div class="b-dot" style="background:${c};"></div>`).join('')}</div>
+      <div class="tone-note" style="margin-top:8px;">${S.eyebrowNote}</div>
+    </div>
+    <div class="sec-title" style="color:${S.accent};">Hair Color</div>
+    <div class="card">
+      <div class="hair-grid">${S.hairColors.map(h=>`<div class="hair-item"><div class="hair-bar" style="background:${h.bg};"></div><div class="hair-lbl">${h.label.replace('\n','<br>')}</div></div>`).join('')}</div>
+    </div>
+  </div>
+
+  <!-- 주얼리 -->
+  <div class="page" id="page-3">
+    <div class="sec-title" style="color:${S.accent};">Jewelry</div>
+    <div class="card">
+      <div class="card-label" style="color:${S.accent};">추천 금속 계열</div>
+      <div class="metal-list">${S.metals.map(m=>`<div class="metal-chip"><div class="metal-dot" style="background:${m.bg};"></div>${m.name}</div>`).join('')}</div>
+      <div class="desc" style="margin-top:12px;font-size:12px;">${S.metalNote}</div>
+    </div>
+    <div class="sec-title" style="color:${S.accent};">Eyewear</div>
+    <div class="card">
+      <div class="eye-list">${S.eyewear.map(e=>`<div class="eye-item"><div class="eye-color" style="background:${e.bg};"></div><div><div class="eye-name">${e.name}</div><div class="eye-desc">${e.desc}</div></div></div>`).join('')}</div>
+    </div>
+  </div>
+
+  <!-- 연락처 -->
+  <div class="page" id="page-4">
+    <div class="sec-title" style="color:${S.accent};">컬러인에듀센터</div>
+    <div class="contact-hero">
+      <div class="contact-quote" style="color:#F9C6BC;">" 색으로 보여주고, 이미지로 말하다. "</div>
+      <div class="contact-brand">컬러인에듀센터</div>
+      <div class="contact-items">
+        <div class="contact-item">📞 063-221-2802 / 010-3443-2802</div>
+        <div class="contact-item">✉️ dldldlgo@naver.com</div>
+        <div class="contact-item">📸 @colorinstory_official</div>
+        <div class="contact-item">📍 전북 전주시 홍산남로51 프렌즈빌딩 8층</div>
+      </div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="card-label" style="color:${S.accent};text-align:center;margin-bottom:10px;">다음 예약</div>
+      <div class="desc" style="text-align:center;font-size:12px;">카카오톡 채널 또는 전화로 예약 후 대면 진단을 진행합니다.</div>
+      <a href="tel:0632212802" style="display:inline-block;margin-top:14px;padding:10px 28px;background:#1a2744;color:#fff;border-radius:20px;font-size:13px;text-decoration:none;font-weight:500;">전화 예약하기</a>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="bnav-btn active" id="bnav-0" onclick="showPage(0,null,this)" style="color:${S.accent};">
+      <span class="bnav-icon">🎨</span>진단
+    </button>
+    <button class="bnav-btn" id="bnav-1" onclick="showPage(1,null,this)"><span class="bnav-icon">👗</span>패션</button>
+    <button class="bnav-btn" id="bnav-2" onclick="showPage(2,null,this)"><span class="bnav-icon">💄</span>뷰티</button>
+    <button class="bnav-btn" id="bnav-3" onclick="showPage(3,null,this)"><span class="bnav-icon">💎</span>주얼리</button>
+    <button class="bnav-btn" id="bnav-4" onclick="showPage(4,null,this)"><span class="bnav-icon">📞</span>연락처</button>
+  </nav>
+  `;
+
+  document.getElementById('main-content').innerHTML = html;
+
+  window.showPage = function(idx, tabEl, bnavEl){
+    document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('active',i===idx));
+    document.querySelectorAll('.tab-btn').forEach((t,i)=>{
+      t.classList.toggle('active',i===idx);
+      t.style.color = i===idx ? S.accent : '';
+    });
+    document.querySelectorAll('.bnav-btn').forEach((b,i)=>{
+      b.classList.toggle('active',i===idx);
+      b.style.color = i===idx ? S.accent : '';
+    });
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+}
 </script>
 </body>
 </html>
